@@ -1,0 +1,24 @@
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix col: <https://w3id.org/colours/>.
+
+col:
+    a skos:ConceptScheme;
+    dct:description "My favorite colours"@en;
+    dct:title "Colours"@en;
+    skos:hasTopConcept col:colours.
+col:Black
+    a skos:Concept;
+    skos:broader col:colours;
+    skos:inScheme col:;
+    skos:prefLabel "GreyBlack"@en.
+col:colours
+    a skos:Concept;
+    skos:narrower col:Black, col:White;
+    skos:prefLabel "colourWheel"@en;
+    skos:topConceptOf col: .
+col:White
+    a skos:Concept;
+    skos:broader col:colours;
+    skos:inScheme col:;
+    skos:prefLabel "ShellWhite"@en.
